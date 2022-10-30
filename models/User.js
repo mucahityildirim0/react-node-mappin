@@ -13,19 +13,19 @@ const UserSchema = new mongoose.Schema(
     },
     email: {
       type: String,
-      required: true,
+      require: true,
       max: 50,
       unique: true,
     },
     password: {
       type: String,
-      required: true,
+      require: true,
       min: 6,
     },
   },
   { timestamps: true }
   // timestamps:true means that the user will have a createdAt and updatedAt field
-  // yorum ekleyerek gidiyorum böylelikle ileride bir projede bu kavramlardan yardım alabilirim :)
+  // yorum ekleyerek gidiyorum böylelikle ileride bir projede bu kavramlardan yardım alabilirim
 );
 
 module.exports = mongoose.model("User", UserSchema);
